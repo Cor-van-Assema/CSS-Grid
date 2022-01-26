@@ -1,0 +1,101 @@
+html, body {
+    background-color: #ffeead;
+    margin: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+@media screen and (max-width: 480px){
+    .gridcontainer {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(12,auto);
+        grid-template-rows: repeat(12,auto);
+        grid-template-areas: 
+            "h h h h h h h h h h h h"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "w w w w w w w w w w w w"
+            "w w w w w w w w w w w w"
+            "w w w w w w w w w w w w"
+            "f f f f f f f f f f f f";
+        font-size: smaller;
+    }
+}
+
+@media screen and (min-width: 480px){ 
+    .gridcontainer {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(12,auto);
+        grid-template-rows: repeat(12,auto);
+        grid-template-areas: 
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h m m m m m m m m m"
+            "h h h w w w w w w w w w"
+            "h h h w w w w w w w w w"
+            "h h h w w w w w w w w w"
+            "h h h f f f f f f f f f";
+    }
+}
+
+@media screen and (min-width: 1024px){ 
+    .gridcontainer {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(12,auto);
+        grid-template-rows: repeat(12,auto);
+        grid-template-areas: 
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h m m m m m m m m w w"
+            "h h f f f f f f f f w w";
+        font-size:larger;
+    }
+}
+
+.gridcontainer > div{
+    color:#fff;
+}
+
+.gridcontainer > .site-header{
+    background-color: #bb00ff;	
+    grid-area: h;
+}
+
+.gridcontainer > .site-main{
+    background-color: #ff0000;
+    grid-area: m;
+}
+
+.gridcontainer > .widget-area {
+    background-color: #00aa00;
+    grid-area: w;
+}
+
+.gridcontainer > .site-footer {
+    background-color: #001199;
+    grid-area: f;
+}
